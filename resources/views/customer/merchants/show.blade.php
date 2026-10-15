@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<a href="{{ route('customer.merchants.index') }}" class="text-blue-600">&larr; Kembali</a>
 <div class="bg-white p-6 rounded shadow mb-4">
     <h1 class="text-2xl font-bold">{{ $merchant->company_name }}</h1>
     <p class="text-gray-600">{{ $merchant->location }}</p>
@@ -17,8 +18,7 @@
                 <h3 class="font-bold">{{ $menu->name }}</h3>
                 <p class="text-sm text-gray-600 line-clamp-2">{{ $menu->description }}</p>
                 <p class="text-blue-600 font-bold mt-1">Rp {{ number_format($menu->price, 0, ',', '.') }}</p>
-                <a href="{{ route('customer.orders.create', $menu) }}"
-                   class="inline-block mt-2 bg-green-600 text-white px-3 py-1 rounded text-sm">Pesan</a>
+                <a href="{{ route('customer.orders.create', $menu) }}" class="inline-block mt-2 bg-green-600 text-white px-3 py-1 rounded text-sm">Pesan</a>
             </div>
         </div>
     @empty

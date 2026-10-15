@@ -12,7 +12,7 @@
             <a href="/" class="font-bold text-lg">Marketplace Katering</a>
             @auth
                 <div class="flex items-center gap-4">
-                    <span>{{ auth()->user()->name }} ({{ auth()->user()->role }})</span>
+                    <span>{{ auth()->user()->name }} - {{ auth()->user()->role }}</span>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button class="text-red-500">Logout</button>

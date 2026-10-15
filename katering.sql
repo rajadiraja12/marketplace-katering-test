@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Okt 2026 pada 20.18
+-- Waktu pembuatan: 15 Okt 2026 pada 21.20
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -59,7 +59,8 @@ CREATE TABLE `menus` (
 --
 
 INSERT INTO `menus` (`id`, `merchant_id`, `name`, `description`, `price`, `photo`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Ikan + Nasi', 'Menu Enak', 15000.00, NULL, '2026-10-15 03:17:49', '2026-10-15 03:17:49');
+(1, 1, 'Puding', 'Menu Enak', 15000.00, 'menus/yLCz9tXEj4875nH5yJgJAnEhIYBqs3RNrvOelXCK.jpg', '2026-10-15 03:17:49', '2026-10-15 11:40:45'),
+(2, 1, 'Puding 2', 'Menu Nikmat', 12000.00, 'menus/l4H8x0Weyuwxx5wPSO8ip33clT9SiOjH69zXHzfP.jpg', '2026-10-15 12:07:04', '2026-10-15 12:07:18');
 
 -- --------------------------------------------------------
 
@@ -83,7 +84,7 @@ CREATE TABLE `merchants` (
 --
 
 INSERT INTO `merchants` (`id`, `user_id`, `company_name`, `description`, `location`, `logo`, `created_at`, `updated_at`) VALUES
-(1, 2, 'Katering Serang', NULL, 'RSUD Kota Serang', NULL, '2026-10-15 03:17:19', '2026-10-15 03:17:19');
+(1, 2, 'Katering Serang', NULL, 'RSUD Kota Serang', 'logos/bYUXbqAboFT97uQl9fzysaXVUxGzu7qHbI2tb3Uf.png', '2026-10-15 03:17:19', '2026-10-15 11:39:10');
 
 -- --------------------------------------------------------
 
@@ -301,7 +302,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT untuk tabel `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `merchants`

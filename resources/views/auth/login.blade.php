@@ -11,13 +11,8 @@
 
     <form method="POST" action="{{ route('login') }}" class="space-y-3">
         @csrf
-        <input name="email" type="email" placeholder="Email" value="{{ old('email') }}"
-               class="w-full border p-2 rounded" required>
-        <input name="password" type="password" placeholder="Password"
-               class="w-full border p-2 rounded" required>
-        <label class="flex items-center gap-2">
-            <input type="checkbox" name="remember"> Ingat saya
-        </label>
+        <input name="email" type="email" placeholder="Email" value="{{ old('email') }}" class="w-full border p-2 rounded" required>
+        <input name="password" type="password" placeholder="Password" class="w-full border p-2 rounded" required>
         <button class="w-full bg-blue-600 text-white p-2 rounded">Login</button>
     </form>
 

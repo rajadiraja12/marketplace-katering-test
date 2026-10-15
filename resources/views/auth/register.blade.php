@@ -18,14 +18,14 @@
             <option value="merchant" @selected(old('role')=='merchant')>Merchant (Katering)</option>
         </select>
 
-        <input name="name"     placeholder="Nama"      value="{{ old('name') }}"     class="w-full border p-2 rounded" required>
-        <input name="email"    type="email" placeholder="Email" value="{{ old('email') }}" class="w-full border p-2 rounded" required>
-        <input name="phone"    placeholder="No. Telepon" value="{{ old('phone') }}"  class="w-full border p-2 rounded">
+        <input name="name" placeholder="Nama" value="{{ old('name') }}" class="w-full border p-2 rounded" required>
+        <input name="email" type="email" placeholder="Email" value="{{ old('email') }}" class="w-full border p-2 rounded" required>
+        <input name="phone" placeholder="No. Telepon" value="{{ old('phone') }}" class="w-full border p-2 rounded">
         <textarea name="address" placeholder="Alamat" class="w-full border p-2 rounded">{{ old('address') }}</textarea>
 
         <div id="merchantFields" class="space-y-3 hidden">
             <input name="company_name" placeholder="Nama Perusahaan Katering" value="{{ old('company_name') }}" class="w-full border p-2 rounded">
-            <input name="location"     placeholder="Lokasi"                   value="{{ old('location') }}"     class="w-full border p-2 rounded">
+            <input name="location" placeholder="Lokasi" value="{{ old('location') }}" class="w-full border p-2 rounded">
         </div>
 
         <input name="password" type="password" placeholder="Password" class="w-full border p-2 rounded" required>

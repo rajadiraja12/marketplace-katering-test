@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<a href="{{ route('customer.merchants.index') }}" class="text-blue-600">&larr; Kembali</a>
 <div class="max-w-lg mx-auto bg-white p-6 rounded shadow">
     <h1 class="text-xl font-bold mb-4">Buat Pesanan</h1>
 

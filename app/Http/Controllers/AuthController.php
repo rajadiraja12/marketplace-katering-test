@@ -21,8 +21,7 @@ class AuthController extends Controller
             'password' => 'required',
         ]);
 
-        if (Auth::attempt($credentials, $request->boolean('remember'))) {
-            $request->session()->regenerate();
+        if (Auth::attempt($credentials)) {
 
             return auth()->user()->isMerchant()
                 ? redirect()->route('merchant.dashboard')
@@ -73,8 +72,6 @@ class AuthController extends Controller
     public function logout(Request $request)
     {
         Auth::logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
         return redirect()->route('login');
     }
 }

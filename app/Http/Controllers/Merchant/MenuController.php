@@ -39,6 +39,23 @@ class MenuController extends Controller
         return view('merchant.menus.form', compact('menu'));
     }
 
+    private function validated(Request $request): array
+    {
+        return $request->validate([
+            'name'        => 'required|string|max:150',
+            'description' => 'nullable|string',
+            'price'       => 'required|numeric|min:0',
+            'photo'       => 'nullable|image|max:2048',
+        ]);
+    }
+
+    private function authorizeMenu(Menu $menu): void
+    {
+        if ($menu->merchant_id !== auth()->user()->merchant->id) {
+            abort(403);
+        }
+    }
+    
     public function update(Request $request, Menu $menu)
     {
         $this->authorizeMenu($menu);
@@ -61,20 +78,4 @@ class MenuController extends Controller
         return back()->with('success', 'Menu dihapus.');
     }
 
-    private function validated(Request $request): array
-    {
-        return $request->validate([
-            'name'        => 'required|string|max:150',
-            'description' => 'nullable|string',
-            'price'       => 'required|numeric|min:0',
-            'photo'       => 'nullable|image|max:2048',
-        ]);
-    }
-
-    private function authorizeMenu(Menu $menu): void
-    {
-        if ($menu->merchant_id !== auth()->user()->merchant->id) {
-            abort(403);
-        }
-    }
 }

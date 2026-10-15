@@ -37,7 +37,6 @@
         </tfoot>
     </table>
 
-    <a href="{{ route('invoice.download', $order) }}"
-       class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded">Download Invoice</a>
+    <a href="{{ route('invoice.download', $order) }}" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded">Download Invoice</a>
 </div>
 @endsection

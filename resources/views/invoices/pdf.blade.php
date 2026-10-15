@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
             font-family: sans-serif; 
@@ -19,16 +20,6 @@
         .total { 
             text-align: right; 
             font-weight: bold; 
-        }
-        .print {
-            position: relative;
-            border-radius: 50px;
-            background-color: rgb(84, 168, 0);
-            color: #ffff;
-            width: 100%;
-        }
-        .tombol {
-            padding: 10px 500px;
         }
         @media print {
             .no-print { 
@@ -84,8 +75,8 @@
     </table>
 
     <p class="total">Total: Rp {{ number_format($order->total_amount, 0, ',', '.') }}</p>
-    <div class="tombol">
-        <button class="print" onclick="window.print()" class="no-print">Print</button>
-    </div>
+    <center>
+        <button class="bg-blue-800 py-2 px-2 rounded text-white" onclick="window.print()" class="no-print">Print</button>
+    </center>
 </body>
 </html>

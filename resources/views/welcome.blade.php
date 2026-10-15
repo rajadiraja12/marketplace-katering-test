@@ -7,8 +7,7 @@
         <a href="{{ route('login') }}" class="bg-blue-600 text-white px-6 py-2 rounded mr-2">Login</a>
         <a href="{{ route('register') }}" class="bg-green-600 text-white px-6 py-2 rounded">Daftar</a>
     @else
-        <a href="{{ auth()->user()->isMerchant() ? route('merchant.dashboard') : route('customer.dashboard') }}"
-           class="bg-blue-600 text-white px-6 py-2 rounded">Ke Dashboard</a>
+        <a href="{{ auth()->user()->isMerchant() ? route('merchant.dashboard') : route('customer.dashboard') }}" class="bg-blue-600 text-white px-6 py-2 rounded">Ke Dashboard</a>
     @endguest
 </div>
 @endsection

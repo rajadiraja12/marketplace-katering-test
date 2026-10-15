@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<a href="{{ route('merchant.dashboard') }}" class="text-blue-600">&larr; Kembali</a>
 <h1 class="text-2xl font-bold mb-4">Order Masuk</h1>
 
 <div class="bg-white rounded shadow overflow-x-auto">
