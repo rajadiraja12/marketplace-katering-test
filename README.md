@@ -22,7 +22,7 @@ Dibuat dengan **Laravel 8** + **MySQL** + **Tailwind CSS**.
 
 ---
 
-## 🚀 Instalasi
+## Instalasi
 
 ```bash
 # 1. Clone
