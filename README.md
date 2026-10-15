@@ -27,7 +27,7 @@ Dibuat dengan **Laravel 8** + **MySQL** + **Tailwind CSS**.
 ```bash
 # 1. Clone
 git clone https://github.com/rajadiraja12/marketplace-katering-test.git
-cd marketplace-katering
+cd marketplace-katering-test
 
 # 2. Install dependency
 composer install
