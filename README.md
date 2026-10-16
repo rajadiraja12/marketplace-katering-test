@@ -3,8 +3,8 @@
 Aplikasi web untuk menghubungkan **perusahaan katering (Merchant)** dengan **kantor (Customer)** dalam pemesanan makan karyawan.
 
 Dibuat dengan **Laravel 8** + **MySQL** + **Tailwind CSS**.
-
 ---
+File MySQL Manual : database/katering.sql
 
 ## Fitur
 
